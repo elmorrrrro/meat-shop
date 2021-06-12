@@ -13,9 +13,7 @@ import full_logo from './images/logo-300x277.png'
 import meat_human from './images/meat-human.jpg'
 import polska from './images/polska.jpg'
 
-
 <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-
 
 function App() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -44,12 +42,13 @@ function App() {
         </div>
       </header>
       <div className="container">
+        <div className="first_text_block">
         <div className="first_text">
           <h1 className="text_meat"><strong>Mięso prosto</strong><br /> z natury</h1>
           <p><span className="lesz_text">W Lesniczówce od blisko 30 lat kultuwujemy</span> <br/><strong>najlepszą tradycję</strong> <span className="lesz_text">i</span> <strong>sprawdzone receptury <br />
           produkcji dziczyzny</strong></p>
         </div>
-        <a href="#">
+        <a href="#" style={{textDecoration: 'none'}}>
           <div className="shop_online">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16" className="cart">
               <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
@@ -59,6 +58,7 @@ function App() {
             </div>
           </div>
         </a>
+        </div>
 
         <div className="container_guarantees">
           <div className="container_guarantees_item">
@@ -79,21 +79,22 @@ function App() {
         </div>
 
         <div className='container_traditions'>
-          <p style={{color:'silver'}}><strong>TRADYCJA I AUTENTYCZNOŚĆ</strong></p>
-          <h1 style={{fontSize: '50px', fontWeight: 'bold'}}><strong>przetwórstwo dziczyzny</strong><br /> leśniczówka</h1>
-          <p style={{color:'grey'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          <img id='meat_human' src={meat_human}></img>
+          <div id='container_traditions_body'>
+            <p style={{color:'silver'}}><strong>TRADYCJA I AUTENTYCZNOŚĆ</strong></p>
+            <h1 style={{fontSize: '50px', fontWeight: 'bold'}}><strong>przetwórstwo dziczyzny</strong><br /> leśniczówka</h1>
+            <p style={{color:'grey'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
               Integer at laoreet tortor. Nullam in auctor justo.<br/>
               Donec dignissim porta fermentum. Proin suscipit a eros eget egestas. <br/>
               Sed a lacinia nisi. Pellentesque eu eros id elit condimentum convallis. <br/>
               Donec at luctus orci. Ut consectetur eu metus ac posuere.
             </p>
-          <div className='container_traditions_bottom'>
-            <img src={arrowRight} className="arrow_right"></img>
-            <a href="#" id='see_link'><p className='arrow_text'>DOWEIEDZ SIĘ WIĘCEJ O NAS</p></a>
+            <div className='container_traditions_bottom'>
+              <img src={arrowRight} className="arrow_right"></img>
+              <a href="#" id='see_link'><p className='arrow_text'>DOWIEEDZ SIĘ WIĘCEJ O NAS</p></a>
+            </div>
           </div>
         </div>
-        <img src={meat_human}></img>
-        
 
         <h1 style={{textAlign: 'center', color: 'white', fontWeight:'bold', padding: '40px'}}><strong>poznaj nasze specjały</strong></h1>
 
